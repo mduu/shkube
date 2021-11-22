@@ -1,7 +1,7 @@
-﻿FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM mcr.microsoft.com/dotnet/sdk AS build
 WORKDIR /src
 COPY ["*.csproj", "./"]
 RUN dotnet restore
